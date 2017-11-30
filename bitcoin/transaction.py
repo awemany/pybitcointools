@@ -511,7 +511,7 @@ def mktx(*args, **kwargs):
         else:
             (ins if is_inp(arg) else outs).append(arg)
 
-    txobj = {"locktime": kwargs.get('locktime', 0), "version": 1, "ins": [], "outs": []}
+    txobj = {"locktime": kwargs.get('locktime', 0), "version": 2, "ins": [], "outs": []}
     for i in ins:
 
         " begin segwit "
