@@ -87,7 +87,7 @@ def is_segwit(tx, hashcode=None):
     return tx[4:6] == b'\x00\x01'
 
 
-def segwit_signature_form(tx, i, script, amount, hashcode=SIGHASH_ALL, fork_id=None):
+def segwit_signature_form(tx, i, script, amount, hashcode=SIGHASH_ALL, fork_id=79<<8):
     d = deserialize(tx)
 
     def parse_vout(o):
